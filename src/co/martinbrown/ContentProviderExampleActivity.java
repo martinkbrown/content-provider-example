@@ -65,6 +65,10 @@ public class ContentProviderExampleActivity extends Activity {
 
                 mNewUri = getContentResolver().insert(
                         MyContentProvider.CONTENT_URI, mNewValues);
+                
+                if (mNewUri != null) {
+                	// --- Null test ---
+                }
 
                 clear();
 
@@ -94,6 +98,10 @@ public class ContentProviderExampleActivity extends Activity {
                         mSelectionClause,
                         mSelectionArgs
                         );
+                
+                if (mRowsUpdated == 0) {
+                	// --- Nothing was updated ---
+                }
 
                 clear();
 
@@ -117,6 +125,10 @@ public class ContentProviderExampleActivity extends Activity {
                         mSelectionArgs
                         );
 
+                if (mRowsDeleted == 0) {
+                	// --- Nothing was deleted ---
+                }
+                
                 clear();
 
             }

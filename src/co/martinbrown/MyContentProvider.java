@@ -3,7 +3,6 @@ package co.martinbrown;
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -19,9 +18,6 @@ public class MyContentProvider extends ContentProvider {
     public static final String AUTHORITY = "co.martinbrown.provider";
     public static final Uri CONTENT_URI = Uri.parse("content://co.martinbrown.provider/" + TABLE_NAMESTABLE);
 
-    private static UriMatcher sUriMatcher;
-
-    @SuppressWarnings("unused")
     private MainDatabaseHelper mOpenHelper;
 
     private static final String SQL_CREATE_MAIN = "CREATE TABLE " +
